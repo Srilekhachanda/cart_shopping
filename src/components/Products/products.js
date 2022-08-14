@@ -61,7 +61,7 @@ const ProductList = () => {
           <div className="breadcrumbslist">
             <div className="aem-Grid aem-Grid--12">
               <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12">
-                <BreadCrumb />
+                <BreadCrumb category={"category"} />
               </div>
               <div className="aem-GridColumn aem-GridColumn--default--9 aem-GridColumn--phone--12">
                 <div className="product-filter">

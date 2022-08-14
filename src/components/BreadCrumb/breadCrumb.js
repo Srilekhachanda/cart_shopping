@@ -4,7 +4,8 @@ import Typography from "@material-ui/core/Typography";
 import Breadcrumbs from "@material-ui/core/Breadcrumbs";
 import '../../assets/scss/breadCrumb.css';
 
-const BreadCrumb = () => {
+const BreadCrumb = ({category}) => {
+  console.log(category);
   return (
     <div className="breadcrumbs">
       <div><Breadcrumbs aria-label="breadcrumb">
@@ -16,7 +17,7 @@ const BreadCrumb = () => {
           color="text.primary"
           href="/"
         >
-          Women’s
+       {category}
         </Link>
         <Link
           underline="hover"

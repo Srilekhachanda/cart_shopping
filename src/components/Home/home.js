@@ -7,6 +7,10 @@ import landing from '../../assets/images/Carousel-image.png';
 import boytwo from '../../assets/images/boytwo.png';
 import boyone from '../../assets/images/boyone.png';
 import { NavLink } from "react-router-dom";
+import newtwo from '../../assets/images/newtwoa.png';
+import newone from '../../assets/images/newonea.png';
+// import { Link } from '@material-ui/core';
+import { Link } from "react-router-dom";
 
 
 function Home() {
@@ -91,23 +95,27 @@ function Home() {
                             <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--6">
                                 <div className='card--box women'>
                                     <div className="wq">
-                                        <h6>Shop Women</h6>
+                                    <h6><Link to="/women">Shop Women</Link></h6>
+                                     
                                         <p>Lorem ipsum dolor sit amet</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--6">
+                                
                                 <div className='card--box men'>
                                     <div className="wq">
-                                        <h6>Shop Men</h6>
+                                        <h6><Link to="/men">Shop Men</Link></h6>
                                         <p>Lorem ipsum dolor sit amet</p>
                                     </div>
                                 </div>
+                              
                             </div>
                             <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--6 shopmen">
                                 <div className='card--box smart'>
                                     <div className="wq">
-                                        <h6>Jewellery</h6>
+                                    <h6><Link to="/jewellery">Jewellery</Link></h6>
+                                       
                                         <p>Lorem ipsum dolor sit amet</p>
                                     </div>
 
@@ -116,7 +124,8 @@ function Home() {
                             <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--6 shopmen">
                                 <div className='card--box assess'>
                                     <div className="wq">
-                                        <h6>Electronics</h6>
+                                    <h6><Link to="/electronics">Electronics</Link></h6>
+                                     
                                         <p>Lorem ipsum dolor sit amet</p>
                                     </div>
 
@@ -126,44 +135,46 @@ function Home() {
                     </div>
                 </div>
 
-                <div className='container'>
-                    <div className="aem-Grid aem-Grid--12 takeoffone">
-                        <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--6">
-                            <div className='take-off'>
+       
+         <div className='container'>
+          <div className="aem-Grid aem-Grid--12 takeoffone">
+         <div className="aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--phone--6">
+                           <div className='take'>
+                           <div className='take-off'>
                                 <h1>Take off in the new <br />Signature Legging</h1>
                                 <h6>Lorem Ipsum Dolor Tempor</h6>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                     sed do eiusmod tempor <br />labore dolore magna lorem ipsum dolor sit dolore magna.</p>
 
-                            </div>
-                            <br />
-                            <div className='btn-three'>
                                 <input type="button" className="btn-one" value="SHOP COLLECTION " />&nbsp;&nbsp;&nbsp;
                                 <input type="button" className="btn-two" value="SHOP NOW" />
 
                                 <div className='lines-one'>
                                     <hr />
                                 </div>
+                           
                             </div>
+                           </div>
 
                         </div>
-                        <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--6">
-                            <div className='take-off-one'>
-                                <img src={boytwo} />
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        <div className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--6">
+            <div className='takeoffs'>
+            <img  src={newone}/>
+            </div>
+         </div>
+         </div>
+         </div>
+        
 
 
 
                 <div className='container'>
-
+                <div className='lastone'>
                     <div className="aem-Grid aem-Grid--12 boy-img-one">
+                       
                         <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12">
                             <div className="card-img">
-                                <img src={boyone} />
+                                <img src={newtwo} />
                             </div>
                         </div>
                         <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
@@ -179,6 +190,7 @@ function Home() {
                                 </div>
                             </div>
                         </div>
+                    </div>
                     </div>
                 </div>
 

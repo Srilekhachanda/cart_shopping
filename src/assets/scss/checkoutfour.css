@@ -19,6 +19,16 @@
   left: 48%;
 }
 
+.items-inorder {
+  display: flex;
+}
+
+.items-inorder img {
+  width: 80px;
+  height: 100px;
+  margin-right: 20px;
+}
+
 .placeOrderTitle {
   font: normal normal 600 30px/30px Source Serif Pro;
 }
@@ -61,16 +71,6 @@
   padding: 20px;
 }
 
-.placeOrderCart h1::before {
-  content: "";
-  background-color: #1363DF;
-  width: 80px;
-  position: absolute;
-  height: 8px;
-  bottom: -25%;
-  left: 46%;
-}
-
 .placeOrder_btn {
   text-align: center;
 }
@@ -111,10 +111,11 @@
   color: #1363DF;
 }
 
-.items-inorder {
-  display: flex;
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .placeOrderCart h1::before {
+    left: 35%;
+  }
 }
-
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .payment__method {
     position: relative;
@@ -131,9 +132,6 @@
   .editIcon3 {
     text-align: right;
   }
-  .placeOrderCart {
-    margin-top: 70px;
-  }
   .placeorder-method {
     margin-left: -20px;
   }
@@ -141,17 +139,5 @@
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   .placeorder-method {
     display: grid;
-  }
-  .imageOne {
-    display: block;
-  }
-  .placeOrderCart h1::before {
-    content: "";
-    background-color: #1363DF;
-    width: 80px;
-    position: absolute;
-    height: 8px;
-    bottom: -25%;
-    left: 39%;
   }
 }/*# sourceMappingURL=checkoutfour.css.map */

@@ -43,14 +43,12 @@ body {
     z-index: 100;
 }
 .header__content {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
-	padding-top: 10px;
-}
+	justify-content: space-evenly;
+	align-items: center;
+	background: #1363df;
+	height:  80px;
+  }
 .header__logo {
 	a {
 		span {
@@ -80,7 +78,7 @@ margin-top: 4px;
 	}
   }
   .header__logo img{
-	width:75px;
+	width:80px;
   }
 
 .header__selected {
@@ -99,6 +97,7 @@ margin-top: 4px;
 		display: -ms-flexbox;
 		display: flex;
 		list-style-type: none;
+		margin: auto;
 		li {
 			a {
 				text-decoration: none;
@@ -158,9 +157,12 @@ margin-top: 4px;
 		.cartCount_zero {
 			position: relative;
 			// right: 100px;
+			
 			a {
+			
 				font-size: 20px;
 			}
+			
 			span {
 				padding-left: 5px;
 				padding-top: 1px;
@@ -181,8 +183,32 @@ margin-top: 4px;
 	margin-top: 6px;
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1800px) {
+@media only screen and (min-width: 769px)  {
 	.hamburgerPhone {
 		display: none;
 	}
 }
+
+@media (max-width:768px) {
+	.header__content{
+	  display: none;
+	}
+  }
+  .logoimg{
+	height: 18px;
+  }
+
+  @media only screen and (max-width: 1440px)  {
+ .header__content{
+	height: 55px;
+ }
+ .header__selected ul li a{
+	font-size: 14px;
+ }
+ .header__icons .cartCount_zero a svg{
+	width: 24px;
+	height: 24px;
+}
+
+  }
+  

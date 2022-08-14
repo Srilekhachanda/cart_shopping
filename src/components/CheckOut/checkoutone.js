@@ -15,14 +15,10 @@ function Checkoutone(props) {
   const totalPrice = itemsPrice + taxPrice + shippingPrice;
   const [qty, setQty] = useState(1);
 
-  function onChange(e) {
-    const v = e.target.value;
-    if (v <= 0) setQty(0);
-    else if (v >= 6) setQty(6);
-    else setQty(v);
-  }
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
   const {
     register,
     handleSubmit,
@@ -31,29 +27,29 @@ function Checkoutone(props) {
     trigger,
   } = useForm();
 
-
   const onSubmit = (data) => {
+    console.log(data);
     dispatch(setShippingAddress(data));
     navigate('/checkouttwo');
   };
 
+
   return (
     <div className='container'>
-      <section className='checkOutCart'>
+      <section className="shipMethodCart">
         <h1>Checkout</h1>
-        <div className="aem-Grid aem-Grid--12">
-
-          <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12">
+        <div class="aem-Grid aem-Grid--12">
+          <div class="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12">
             <form onSubmit={handleSubmit(onSubmit)}>
-              <div className="aem-Grid aem-Grid--12 ">
-                <h3 className='guestOut'>Guest Checkout</h3>
+              <div class="aem-Grid aem-Grid--12 ">
+                <h4 className='guestOut'>Guest Checkout</h4>
                 <p className="contact">
                   Contact information
                 </p>
                 <p className='details'>
                   We’ll use these details to keep you informed on your delivery.
                 </p>
-                <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
+                <div class="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
                   <div className="form-group">
                     <label className='emailLabel' for="exampleFormControlInput1">Email</label>
                     <input
@@ -75,7 +71,7 @@ function Checkoutone(props) {
                     )}
                   </div>
                 </div>
-                <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
+                <div class="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
                   <div className="form-group">
                     <label for="Phone Number1">Phone Number</label>
                     <input
@@ -94,8 +90,8 @@ function Checkoutone(props) {
                   </div>
                 </div>
               </div>
-              <div className="aem-Grid aem-Grid--12">
-                <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
+              <div class="aem-Grid aem-Grid--12">
+                <div class="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
                   <p className='shippingInfo'>1. Shipping Information</p>
                   <div className="form-group">
                     <label for="exampleFormControlInput1">Country</label>
@@ -112,11 +108,11 @@ function Checkoutone(props) {
                     )}
                   </div>
                 </div>
-                <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
+                <div class="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
                 </div>
               </div>
-              <div className="aem-Grid aem-Grid--12">
-                <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
+              <div class="aem-Grid aem-Grid--12">
+                <div class="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
                   <div className="form-group">
                     <label for="exampleFormControlInput1">First Name</label>
                     <input
@@ -135,10 +131,10 @@ function Checkoutone(props) {
                   </div>
                 </div>
 
-                <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
+                <div class="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
                   <div className="form-group">
                     <label for="exampleFormControlInput1">Last Name</label>
-
+                    {/* <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" /> */}
 
                     <input
                       type="text"
@@ -156,8 +152,8 @@ function Checkoutone(props) {
                   </div>
                 </div>
               </div>
-              <div className="aem-Grid aem-Grid--12">
-                <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
+              <div class="aem-Grid aem-Grid--12">
+                <div class="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
                   <div className="form-group">
                     <label for="exampleFormControlInput1">Street Address</label>
                     <input
@@ -175,10 +171,10 @@ function Checkoutone(props) {
                     )}
                   </div>
                 </div>
-                <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
+                <div class="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
                   <div className="form-group">
                     <label for="exampleFormControlInput1">Street Address 2</label>
-
+                    {/* <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" /> */}
                     <input
                       type="text"
                       className={`form-control ${errors.streetAddress1 && "invalid"}`}
@@ -195,8 +191,8 @@ function Checkoutone(props) {
                   </div>
                 </div>
               </div>
-              <div className="aem-Grid aem-Grid--12">
-                <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
+              <div class="aem-Grid aem-Grid--12">
+                <div class="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
                   <div className="form-group">
                     <label for="exampleFormControlInput1">City</label>
                     <input
@@ -214,7 +210,7 @@ function Checkoutone(props) {
                     )}
                   </div>
                 </div>
-                <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
+                <div class="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
                   <div className="form-group">
                     <label for="exampleFormControlInput1">State</label>
                     <input
@@ -233,7 +229,7 @@ function Checkoutone(props) {
                   </div>
                 </div>
 
-                <div className="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--12">
+                <div class="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--12">
                   <div className="form-group">
                     <label for="exampleFormControlInput1">Zip</label>
                     <input
@@ -254,16 +250,41 @@ function Checkoutone(props) {
 
               </div>
               <br />
-              <div className="aem-Grid aem-Grid--12">
-                <div className="aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--phone--12 ">
+              {/* <div class="aem-Grid aem-Grid--12">
+              <div class="aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--phone--12 ">
+                <div className='continue_shipping'>
+                  <button type="submit" class="btn-shipping">
+                    CONTINUE TO SHIPPING METHOD
+                  </button>
+                </div>
 
-
-                  <div className='continue_shipping'>
-
-                    <button type="submit" className="btn-shipping">
+                <div className='continue_shipping'>
+                  <Link to="/shippingMethod" >
+                    <button type="submit" class="btn-shipping">
                       CONTINUE TO SHIPPING METHOD
                     </button>
+                  </Link>
+                </div>
+              </div>
+            </div> */}
 
+
+
+
+              <div class="aem-Grid aem-Grid--12">
+                <div class="aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--phone--12 ">
+                  {/* <div>
+                    <button type="submit" class="btn-shipping">
+                      CONTINUE TO SHIPPING METHOD
+                    </button>
+                  </div> */}
+
+                  <div className='continue_shipping'>
+                    {/* <Link to="/shippingMethod" > */}
+                    <button type="submit" class="btn-shipping">
+                      CONTINUE TO SHIPPING METHOD
+                    </button>
+                    {/* </Link> */}
                   </div>
                 </div>
               </div>
@@ -273,14 +294,29 @@ function Checkoutone(props) {
               <p> 3. Payment Information</p>
               <hr />
             </form>
+
+
+            {/* <div className='checkout_Steps'>
+            <hr />
+            <h4> 2. Shipping Method </h4>
+            {
+              !isShipping ? <h4> 2. Shipping Method </h4> : <ShippingMethod isShippingDetails={isShipping} />
+            }
+            <hr />
+            <h4>3. Payment Information</h4>
+            <hr />
+          </div> */}
           </div>
-          <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
-            <div className="aem-Grid aem-Grid--12 button-btn">
-              <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 text-left">
+
+
+
+          <div class="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
+            <div class="aem-Grid aem-Grid--12 button-btn">
+              <div class="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 text-left">
                 <p className='expressCheckOut'>Sign in for Express <br />Checkout</p>
               </div>
 
-              <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 text__right">
+              <div class="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 text__right">
                 <Link to="/login"> <button type="button" className='btn-signin'>
                   SIGN IN</button></Link>
 
@@ -290,9 +326,8 @@ function Checkoutone(props) {
             <br />
             <br />
 
-            <div className="aem-Grid aem-Grid--12 button-btnone">
+            <div class="aem-Grid aem-Grid--12 aem-GridColumn--phone--12 button-btnone">
               <p className='pricingSummary'>Pricing Summary</p>
-
               <div className="cart__right-subtotal">
                 <p>Price</p>
                 <p>${itemsPrice.toFixed(2)}</p>
@@ -317,14 +352,14 @@ function Checkoutone(props) {
                 <p><b>Estimated Total</b></p>
                 <p><b>${totalPrice.toFixed(2)}</b></p>
               </div>
-
             </div>
           </div>
         </div>
       </section>
-    </div >
+    </div>
 
   )
 }
+
 
 export default Checkoutone

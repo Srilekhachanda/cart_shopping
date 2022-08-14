@@ -5,6 +5,10 @@ import { useSelector } from 'react-redux';
 import { FiEdit2 } from "react-icons/fi"
 
 function Checkoutfour(props) {
+    const shippingAddress = useSelector((state) => state.orderDetails.shippingAddress);
+    const shippingMethod = useSelector((state) => state.orderDetails.shippingMethod);
+    const paymentInfo = useSelector((state) => state.orderDetails.paymentInfo);
+
     const { cartItems, onAdd, onRemove } = props;
     const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
     const taxPrice = itemsPrice * 0.14;
@@ -18,103 +22,99 @@ function Checkoutfour(props) {
         else if (v >= 6) setQty(6);
         else setQty(v);
     }
-    const shippingAddress = useSelector((state) => state.orderDetails.shippingAddress);
-    const shippingMethod = useSelector((state) => state.orderDetails.shippingMethod);
-    const paymentInfo = useSelector((state) => state.orderDetails.paymentInfo);
 
     return (
         <div className='container'>
             <section className="placeOrderCart">
                 <h1>Checkout</h1>
-                <div className="aem-Grid aem-Grid--12">
+                <div class="aem-Grid aem-Grid--12">
                     <h4 className='placeOrderTitle'>Guest Checkout</h4>
-                    <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12">
+                    <div class="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12">
                         <div className='cartA'>
-                            <div className="aem-Grid aem-Grid--12 placeorder-method">
+                            <div class="aem-Grid aem-Grid--12 placeorder-method">
                                 <div className='editOption'>
-                                    <p>Shipping Information </p>
+                                    <p>Shipping Information</p>
                                 </div>
-                                <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
+                                <div class="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
                                     <p className='shipping_details'>{shippingAddress.email} <br />{shippingAddress.phoneNumber}</p>
                                 </div>
-                                <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
+                                <div class="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
                                     <p className='shipping_details'>
                                         {shippingAddress.streetAddress}<br /> {shippingAddress.streetAddress1} <br />{shippingAddress.city} {shippingAddress.state} {shippingAddress.zipcode}<br /> {shippingAddress.country}
                                     </p>
                                 </div>
-                                <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
+                                <div class="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
                                     <div className='editIcon2'>
-                                        <img src="" /><span><FiEdit2 />Edit</span>
+                                    <FiEdit2 /><span>Edit</span>
                                     </div>
                                 </div>
                             </div>
                             <br />
 
-                            <div className="aem-Grid aem-Grid--12 placeorder-method">
+                            <div class="aem-Grid aem-Grid--12 placeorder-method">
                                 <div className='editOption'>
                                     <p>Shipping Method</p>
                                 </div>
-                                <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12">
+                                <div class="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12">
                                     <p className='shipping_details'>
                                         {shippingMethod}
                                     </p>
                                 </div>
-                                <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
+                                <div class="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
                                     <div className='editIcon2'>
-                                        <img src="" /><span> <FiEdit2 />Edit</span>
+                                    <FiEdit2 /><span>Edit</span>
                                     </div>
                                 </div>
                             </div>
                             <br />
-                            <div className="aem-Grid aem-Grid--12 placeorder-method">
+                            <div class="aem-Grid aem-Grid--12 placeorder-method">
                                 <div className='editOption'>
                                     <p>Payment Information</p>
                                 </div>
-                                <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12">
+                                <div class="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12">
                                     <p className='shipping_details'>
                                         {paymentInfo.paymentMethod}<br />
                                         Visa ending in {paymentInfo.cardNumber?.substring(paymentInfo.cardNumber?.length - 4)}<br />
                                     </p>
                                 </div>
 
-                                <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
+                                <div class="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
                                     <div className='editIcon3'>
-                                        <img src="" /><span><FiEdit2 />Edit</span>
+                                    <FiEdit2 /><span>Edit</span>
                                     </div>
                                 </div>
                             </div>
                             <br />
 
-                            <div className="aem-Grid aem-Grid--12">
+                            <div class="aem-Grid aem-Grid--12">
                                 <div className='shipping_info_radio'>
-                                    <div className="placeorder-method">
-                                        <div className='editOption'>
-                                            <p>3 items in your order</p>
-                                        </div>
-                                        <div className='imageOne'>
-                                            <div className="aem-Grid aem-Grid--12">
-                                                {cartItems.length === 0 ? <h2 className='emptybasket'>Basket is empty <i className='tear-icon fas fa-sad-tear'></i></h2> :
-                                                    <>{cartItems?.map((item) => (
-                                                        <>
-                                                            <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
-                                                                <div className='items-inorder'>
-                                                                    <img src={item.image} />
-                                                                    <div>
-                                                                        <h6>{item.title}</h6>
-                                                                        <p>Size: Medium</p>
-                                                                        <p>Color: Storm</p>
-                                                                        <p>Quantity: 1</p>
-                                                                        <p>Price: ${item.price}</p>
-                                                                    </div>
+                                    <div class="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12">
+                                        <div class="aem-Grid aem-Grid--12 placeorder-method">
+                                            <div className='editOption'>
+                                                <h5>{cartItems.length} items in your order</h5>
+                                            </div>
+                                            {cartItems.length === 0 ? <h2 className='emptybasket'>Basket is empty <i className='tear-icon fas fa-sad-tear'></i></h2> :
+                                                <>{cartItems?.map((item) => (
+                                                    <>
+                                                        <div class="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
+                                                            <div className='items-inorder'>
+                                                                <img src={item.image} />
+                                                                <div>
+                                                                    <h6>{item.title}</h6>
+                                                                    <p>Size: Medium</p>
+                                                                    <p>Color: Storm</p>
+                                                                    <p>Quantity: {item.qty}</p>
+                                                                    <p>Price: ${item.price}</p>
                                                                 </div>
                                                             </div>
-                                                        </>
-                                                    ))}</>
-
-                                                }
-                                            </div>
-
+                                                        </div>
+                                                        <div class="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12"></div>
+                                                    </>
+                                                ))}</>
+                                            }
                                         </div>
+                                    </div>
+                                    <div class="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
                                     </div>
                                 </div>
                             </div>
@@ -122,7 +122,7 @@ function Checkoutfour(props) {
                             <div className='payment__method'>
                                 <div className='placeOrder_btn'>
                                     <Link to="/checkoutfive">
-                                        <button type="button" className="btn-shipping-method">
+                                        <button type="button" class="btn-shipping-method">
                                             PLACE ORDER
                                         </button></Link>
                                 </div>
@@ -134,10 +134,9 @@ function Checkoutfour(props) {
                         </div>
                     </div>
 
-                    <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
-                        <div className="aem-Grid aem-Grid--12 pricing-detail">
-                            <p className='pricing__Summary'>Pricing Summary</p>
-
+                    <div class="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
+                        <div class="aem-Grid aem-Grid--12 aem-GridColumn--phone--12 button-btnone">
+                            <p className='pricingSummary'>Pricing Summary</p>
                             <div className="cart__right-subtotal">
                                 <p>Price</p>
                                 <p>${itemsPrice.toFixed(2)}</p>

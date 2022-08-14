@@ -23,6 +23,8 @@ function Checkouttwo(props) {
     else if (v >= 6) setQty(6);
     else setQty(v);
   }
+
+
   const shippingAddress = useSelector((state) => state.orderDetails.shippingAddress);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -35,14 +37,14 @@ function Checkouttwo(props) {
     <div className='container'>
       <section className="shipMethodCart">
         <h1>Checkout</h1>
-        <div className="aem-Grid aem-Grid--12">
+        <div class="aem-Grid aem-Grid--12">
           <h4 className='shippingTitle'>Guest Checkout</h4>
-          <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12">
-            <div className="aem-Grid aem-Grid--12 shipping-Info">
+          <div class="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12">
+            <div class="aem-Grid aem-Grid--12 shipping-Info">
               <div className='editOption'>
                 <p>Shipping Information</p>
               </div>
-              <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
+              <div class="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
                 <p className='shipping_details'>{shippingAddress.email} <br />{shippingAddress.phoneNumber}</p>
               </div>
               <div class="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
@@ -50,65 +52,63 @@ function Checkouttwo(props) {
                   {shippingAddress.streetAddress}<br /> {shippingAddress.streetAddress1} <br />{shippingAddress.city} {shippingAddress.state} {shippingAddress.zipcode}<br /> {shippingAddress.country}
                 </p>
               </div>
-              <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
+              <div class="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
                 <div className='editIcon3'>
-                  <img src="" /><span> <FiEdit2 />Edit</span>
+                <FiEdit2 /><span>Edit</span>
                 </div>
               </div>
             </div>
             <br />
 
-            <div className="aem-Grid aem-Grid--12">
-              <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12">
+            <div class="aem-Grid aem-Grid--12">
+              <div class="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12">
                 <div className='shipping_method_radio'>
                   <h3>2. Shipping Method</h3>
-
-                  <div className="form-check">
-                    <input className="standard" type="radio" value=" Standard Shipping (4-8 business days via USPS) FREE" name="flexRadioDefault" id="flexRadioDefault1" onChange={handleShippingMethod} />
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value=" Standard Shipping (4-8 business days via USPS) FREE" name="flexRadioDefault" id="flexRadioDefault1" onChange={handleShippingMethod} />
                     <label class="form-check-label" for="flexRadioDefault1" className='label_text'>
                       Standard Shipping (4-8 business days via USPS) FREE
                     </label>
                   </div>
-                  <div className="form-check">
-                    <input className="standard" type="radio" value="Express Delivery (2-5 business days via USPS) $17.95" name="flexRadioDefault" id="flexRadioDefault2" onChange={handleShippingMethod} />
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value="Express Delivery (2-5 business days via USPS) $17.95" name="flexRadioDefault" id="flexRadioDefault2" onChange={handleShippingMethod} />
                     <label class="form-check-label" for="flexRadioDefault2" className='label_text'>
                       Express Delivery (2-5 business days via USPS) $17.95
                     </label>
                   </div>
-                  <div className="form-check">
-                    <input className="standard" type="radio" value="Next Day Delivery (Next business days via FedEx) $53.61" name="flexRadioDefault" id="flexRadioDefault3" onChange={handleShippingMethod} />
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value="Next Day Delivery (Next business days via FedEx) $53.61" name="flexRadioDefault" id="flexRadioDefault3" onChange={handleShippingMethod} />
                     <label class="form-check-label" for="flexRadioDefault1" className='label_text'>
                       Next Day Delivery (Next business days via FedEx) $53.61
                     </label>
                   </div>
                 </div>
               </div>
-              <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
+              <div class="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
               </div>
             </div>
 
             <div className='button__method'>
               <Link to="/checkoutthree">
-                <button type="button" className="btn-shipping-method">
+                <button type="button" class="btn-shipping-method">
                   CONTINUE TO PAYMENT
                 </button></Link>
             </div>
 
-            <div className="aem-Grid aem-Grid--12">
-              <div className="aem-GridColumn aem-GridColumn--default--10 aem-GridColumn--phone--12 payment_info">
+            <div class="aem-Grid aem-Grid--12">
+              <div class="aem-GridColumn aem-GridColumn--default--10 aem-GridColumn--phone--12 payment_info">
                 <hr />
                 <p> 3. Payment Information</p>
                 <hr />
               </div>
-              <div className="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--12">
+              <div class="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--12">
               </div>
             </div>
           </div>
 
-          <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
-            <div className="aem-Grid aem-Grid--12 aem-GridColumn--phone--12 shipping_pricing">
-              <p className='pricing__Summary'>Pricing Summary</p>
-
+          <div class="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
+            <div class="aem-Grid aem-Grid--12 aem-GridColumn--phone--12 button-btnone">
+              <p className='pricingSummary'>Pricing Summary</p>
               <div className="cart__right-subtotal">
                 <p>Price</p>
                 <p>${itemsPrice.toFixed(2)}</p>
@@ -141,5 +141,6 @@ function Checkouttwo(props) {
     </div>
   )
 }
+
 
 export default Checkouttwo

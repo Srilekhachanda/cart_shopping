@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 // import "../Style/Checkoutthree.css"
 import { Link } from "react-router-dom";
 import { useSelector } from 'react-redux';
@@ -8,26 +8,40 @@ import Facebook from '../../assets/images/facebook.svg';
 import Twitter from '../../assets/images/twitter.svg';
 
 function Checkoutfive(props) {
-    const { cartItems, onAdd, onRemove } = props;
     const shippingAddress = useSelector((state) => state.orderDetails.shippingAddress);
     const shippingMethod = useSelector((state) => state.orderDetails.shippingMethod);
+
+    const { cartItems, onAdd, onRemove } = props;
+    const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
+    const taxPrice = itemsPrice * 0.14;
+    const shippingPrice = itemsPrice > 2000 ? 0 : 20;
+    const totalPrice = itemsPrice + taxPrice + shippingPrice;
+    const [qty, setQty] = useState(1);
+
+    function onChange(e) {
+        const v = e.target.value;
+        if (v <= 0) setQty(0);
+        else if (v >= 6) setQty(6);
+        else setQty(v);
+    }
+
     return (
         <div className='container'>
             <section className="checkOutCart">
                 <h1>Order Successful!</h1>
                 <h4 className='orderNumberTitle'>Order Number #1700834</h4>
-                <div className="aem-Grid aem-Grid--12">
-                    <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12">
+                <div class="aem-Grid aem-Grid--12">
+                    <div class="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12">
                         <div className='cartA'>
-                            <div className="aem-Grid aem-Grid--12 order-method">
+                            <div class="aem-Grid aem-Grid--12 order-method">
 
-                                <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
+                                <div class="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
                                     <div className='order_details'>
                                         <h3>Shipping Information </h3>
-                                        <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
+                                        <div class="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
                                             <p className='shipping_details'>{shippingAddress.email} <br />{shippingAddress.phoneNumber}</p>
                                         </div>
-                                        <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
+                                        <div class="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
                                             <p className='shipping_details'>
                                                 {shippingAddress.streetAddress}<br /> {shippingAddress.streetAddress1} <br />{shippingAddress.city} {shippingAddress.state} {shippingAddress.zipcode}<br /> {shippingAddress.country}
                                             </p>
@@ -35,7 +49,7 @@ function Checkoutfive(props) {
                                     </div>
                                 </div>
 
-                                <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
+                                <div class="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
                                     <div className='order_details'>
                                         <h3>Shipping Method</h3>
 
@@ -44,7 +58,7 @@ function Checkoutfive(props) {
                                         </p>
                                     </div>
                                 </div>
-                                <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
+                                <div class="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
                                     <div className='order_details'>
                                         <h3>Payment Information</h3>
                                         <p className='shipping_details'>
@@ -55,34 +69,26 @@ function Checkoutfive(props) {
                                 </div>
                             </div>
                             <br />
-                            <div className="aem-Grid aem-Grid--12">
-                                <div className="">
-                                    <div className='imageOne'>
-                                        <div className="aem-Grid aem-Grid--12">
-                                            {cartItems.length === 0 ? <h2 className='emptybasket'>Basket is empty <i className='tear-icon fas fa-sad-tear'></i></h2> :
-                                                <>{cartItems?.map((item) => (
-                                                    <>
-                                                        <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
-                                                            <div className='items-inorder'>
-                                                                <img src={item.image} />
-                                                                <div>
-                                                                    <h6>{item.title}</h6>
-                                                                    <p>Size: Medium</p>
-                                                                    <p>Color: Storm</p>
-                                                                    <p>Quantity: 1</p>
-                                                                    <p>Price: ${item.price}</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </>
-                                                ))}</>
+                            <div class="aem-Grid aem-Grid--12 aem-GridColumn--phone--12">
+                                {cartItems.length === 0 ? <h2 className='emptybasket'>Basket is empty <i className='tear-icon fas fa-sad-tear'></i></h2> :
+                                    <>{cartItems?.map((item) => (
+                                        <>
+                                            <div class="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
+                                                <div className='items-inorder'>
+                                                    <img src={item.image} />
+                                                    <div>
+                                                        <h6>{item.title}</h6>
+                                                        <p>Size: Medium</p>
+                                                        <p>Color: Storm</p>
+                                                        <p>Quantity: {item.qty}</p>
+                                                        <p>Price: ${item.price}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </>
+                                    ))}</>
 
-                                            }
-                                        </div>
-
-                                    </div>
-                                </div>
-
+                                }
                             </div>
                             <div className='terms_order'>
                                 <p className='terms_condition'>
@@ -95,9 +101,9 @@ function Checkoutfive(props) {
                         </div>
                     </div>
 
-                    <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
-                        <div className="orderSuccessfull-rightColumn">
-                            <div className="orderSuccessfull-right">
+                    <div class="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
+                        <div class="orderSuccessfull-rightColumn">
+                            <div class="orderSuccessfull-right">
                                 <p className='order__Summary'>Give us a follow<br /> to SAVE 20%<br />on your next order.</p>
                                 <div className='order__socialicons'>
                                     <img src={Instagram} alt="instagram" />

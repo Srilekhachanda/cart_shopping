@@ -5,8 +5,11 @@
     display: none;
   }
   
-  .newone {
-    width: 75% !important;
+  // .newone {
+  //   width: 80% !important;
+  // }
+  .carousel-indicators{
+    display:none;
   }
   
   .header-one {
@@ -24,14 +27,13 @@
   }
   
   .text h1 {
-    font-family: Source Serif Pro, Semibold;
-    width: 442px;
     color: #172026;
     opacity: 1;
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 600;
+}
   
-  }
+  
   
   .text p {
     font: normal normal normal 13px Muli;
@@ -40,7 +42,7 @@
   
   .buttonone {
     color: white;
-    font-size: 10px;
+    font-size: 14px;
     width: 130px;
     height: 24px;
     background: #1363DF 0% 0% no-repeat padding-box;
@@ -49,37 +51,42 @@
     border: none;
   }
   
-  .one-card {
+  // .one-card {
   
-    margin-left: -51px;
-    margin-right: 84px;
-    margin-bottom: 26px;
+  //   margin-left: -51px;
+  //   margin-right: 84px;
+  //   margin-bottom: 26px;
   
-  }
+  // }
   
   .two-card {
-    height: 24rem;
+    height: 34rem;
     background-color: #1B252C;
+  }
+  .one-card{
+    margin-top:-27px;
   }
   
   .three-card {
     color: white;
     text-align: center;
-    padding-top: 4rem;
+    padding-top: 10rem;
     font-size: 25px;
     font-family: 'Source Serif Pro', serif;
   }
   
-  .take-off {
-    padding-left: 115px;
-    padding-top: 35px;
+  // .take-off {
+  //   padding-left: 115px;
+  //   padding-top: 35px;
+  // }
+  
+  .take{
+    padding-left: 90px;
   }
-  
-  
   .take-off h1 {
     color: #172026;
     opacity: 1;
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 600;
     font-family: 'Source Serif Pro', serif;
   }
@@ -87,6 +94,8 @@
   .take-off h6 {
     font: normal normal 600 13px/25px;
     color: #172026;
+    font-weight: 600;
+    font-size: 13px;
   }
   
   .take-off p {
@@ -95,20 +104,18 @@
     letter-spacing: 0px;
   }
   
-  
-  .take-off-one img {
-    height: 250px;
-    width: 317px;
-    margin-left: -87px;
+  .take-off-one img{
+    width: 100%;
   }
+ 
   
   .card-img img {
-    width: 80%;
+    width: 100%;
     
-    margin-bottom: 30px;
-    height: 220px;
-    margin-left: 78px;
-    margin-top: 30px;
+    // margin-bottom: 30px;
+    // height: 220px;
+    // margin-left: 78px;
+    // margin-top: 30px;
   
   }
   
@@ -144,7 +151,7 @@
   
   .btn-two {
     color: white;
-    font-size: 10px;
+    font-size: 14px;
     width: 130px;
     height: 24px;
     background: #1363DF 0% 0% no-repeat padding-box;
@@ -232,6 +239,10 @@
     background-image: url("https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg");
     height: 200px;
     position: relative;
+  }
+  .wq a{
+    text-decoration: none;
+    color: white;
   }
   
   .wq {
@@ -596,5 +607,19 @@
     opacity: 3;
   }
   }
-  
-  
+
+
+.takeoffs img{
+  width:100%
+}
+.lastone{
+  padding-bottom:45px;
+}
+
+@media screen and (max-width: 1024px) {
+.text p {
+  font: normal normal normal 12px Muli;
+  color: #172026;
+}
+}
+ 

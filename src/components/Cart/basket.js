@@ -124,7 +124,8 @@ export default function Basket(props) {
             </div>
 
             < div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12" >
-              <div className='cart__right'>
+             <div className='cartlast'>
+             <div className='cart__right'>
                 <h4>Pricing Summary</h4>
                 {cartItems.length !== 0 && (
                   <>
@@ -164,6 +165,7 @@ export default function Basket(props) {
                   </>
                 )}
               </div>
+             </div>
             </div>
           </div>
         </div>

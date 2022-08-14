@@ -231,9 +231,6 @@ div.img4 {
     display: flex;
     flex-direction: row;
   }
-  .componentimg {
-    height: 385px;
-  }
 }
 .text-block-three, .text-block-two {
   font-family: Muli;

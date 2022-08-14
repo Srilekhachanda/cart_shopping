@@ -8,26 +8,11 @@ import venia from '../../assets/images/venia.png';
 
 const Header = (props) => {
   const [loading, setLoading] = useState(false);
-  const Loading = () => {
-    return (
-      <>
-        <div className="col-md-3">
-          <Skeleton height={350} />
-          <Skeleton height={350} />
-          <Skeleton height={350} />
-        </div>
-      </>
-    );
-  }
-  const ShowProducts = () => {
-    return (
-      <header className="header">
-        <div className="headerHamburger">
-          <div className="aem-GridColumn--phone--12">
-            <div className="container">
-              <div className="header__content">
+  
+  return (
+    <div className="header__content">
                 <div className="header__logo" >
-                  <NavLink className="" to="/"><img src={venia} /></NavLink>
+                  <NavLink className="" to="/"><img className="logoimg" src={venia} /></NavLink>
                 </div>
                 <div className="header__selected">
                   <ul>
@@ -39,8 +24,7 @@ const Header = (props) => {
                   </ul>
                 </div>
                 <div className="header__icons">
-                  <ul>
-                    <li className="cartCount_zero">
+                    <div className="cartCount_zero">
                       <NavLink to="/cart" className="">
                         <FiShoppingBag />{' '}
                         {props.countCartItems ? (
@@ -49,26 +33,9 @@ const Header = (props) => {
                           ''
                         )}
                       </NavLink>{' '}
-                    </li>
-                  </ul>
+                    </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </header>
-    );
-  }
-
-  return (
-    <div className="headerHamburger">
-      <div className="">
-        <div className="justify-content-center">
-          {loading ? <Loading /> : <ShowProducts />}
-
-        </div>
-      </div>
-    </div>
   )
 }
 export default Header;

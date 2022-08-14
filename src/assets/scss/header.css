@@ -42,8 +42,10 @@ body {
 
 .header__content {
   display: flex;
-  justify-content: space-between;
-  padding-top: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #1363df;
+  height: 80px;
 }
 
 .header__logo a span {
@@ -72,7 +74,7 @@ body {
 }
 
 .header__logo img {
-  width: 75px;
+  width: 80px;
 }
 
 .header__selected {
@@ -84,6 +86,7 @@ body {
 .header__selected ul {
   display: flex;
   list-style-type: none;
+  margin: auto;
 }
 .header__selected ul li a {
   text-decoration: none;
@@ -148,8 +151,29 @@ body {
   margin-top: 6px;
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1800px) {
+@media only screen and (min-width: 769px) {
   .hamburgerPhone {
     display: none;
+  }
+}
+@media (max-width: 768px) {
+  .header__content {
+    display: none;
+  }
+}
+.logoimg {
+  height: 18px;
+}
+
+@media only screen and (max-width: 1440px) {
+  .header__content {
+    height: 55px;
+  }
+  .header__selected ul li a {
+    font-size: 14px;
+  }
+  .header__icons .cartCount_zero a svg {
+    width: 24px;
+    height: 24px;
   }
 }/*# sourceMappingURL=header.css.map */

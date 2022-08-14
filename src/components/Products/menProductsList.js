@@ -3,7 +3,7 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { setProducts } from "../../redux/actions/productsActions";
 import MenProductPage from "../ProductInformation/mensPage";
-import men from "../../assets/images/mennew.png";
+import men from "../../assets/images/menhero.png";
 import BreadCrumb from '../BreadCrumb/breadCrumb';
 import '../../assets/scss/productList.css';
 
@@ -61,7 +61,7 @@ const MenProductList = () => {
         <div className="breadcrumbslist">
           <div className="aem-Grid aem-Grid--12">
             <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12">
-              <BreadCrumb />
+            <BreadCrumb  category={"Men's"}/>
             </div>
             <div className="aem-GridColumn aem-GridColumn--default--9 aem-GridColumn--phone--12">
               <div className="product-filter">

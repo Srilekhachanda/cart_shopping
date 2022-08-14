@@ -6,6 +6,10 @@ $background-color_2: transparent;
 $background-color_3: #f9f9f9;
 $border-color_1: transparent;
 
+
+.cart__right {
+    margin-top: 0px;
+}
 /*# sourceMappingURL=cart.css.map */
 h1 {
 	font-family: $font-family_1;
@@ -25,8 +29,8 @@ h3 {
 
 .quant {
 	border: 2px #B5B7BC solid;
-	width: 4rem;
-	height: 2rem;
+	width: 8rem;
+	height: 3rem;
 	text-align: center;
 	border-radius: 6px !important;
 	padding-top: 5px;
@@ -44,8 +48,8 @@ h3 {
 }
 
 .cart {
-	margin-top: 70px;
-	margin-bottom: 25px;
+	// margin-top: 70px;
+	// margin-bottom: 25px;
 
 	h1 {
 		text-align: center;
@@ -87,6 +91,9 @@ h3 {
 			}
 		}
 	}
+}
+.input-group {
+    padding-top: 1rem;
 }
 
 .cart__btn {

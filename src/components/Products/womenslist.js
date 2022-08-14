@@ -3,7 +3,7 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { setProducts } from "../../redux/actions/productsActions";
 import WomenProductPage from "../ProductInformation/womensPage";
-import women from "../../assets/images/women.png";
+import women from "../../assets/images/womenone.png";
 import BreadCrumb from '../BreadCrumb/breadCrumb';
 import '../../assets/scss/productList.css';
 import { BiSort } from "react-icons/bi";
@@ -62,7 +62,7 @@ const WomenProductList = () => {
         <div className="breadcrumbslist">
           <div className="aem-Grid aem-Grid--12">
             <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12">
-              <BreadCrumb />
+            <BreadCrumb  category={"women's"}/>
             </div>
             <div className="aem-GridColumn aem-GridColumn--default--9 aem-GridColumn--phone--12">
               <div className="product-filter">

@@ -1,3 +1,7 @@
+.cart__right {
+  margin-top: 0px;
+}
+
 /*# sourceMappingURL=cart.css.map */
 h1 {
   font-family: "Source Serif Pro", serif;
@@ -17,8 +21,8 @@ h3 {
 
 .quant {
   border: 2px #B5B7BC solid;
-  width: 4rem;
-  height: 2rem;
+  width: 8rem;
+  height: 3rem;
   text-align: center;
   border-radius: 6px !important;
   padding-top: 5px;
@@ -35,10 +39,6 @@ h3 {
   padding: 5px 100px;
 }
 
-.cart {
-  margin-top: 70px;
-  margin-bottom: 25px;
-}
 .cart h1 {
   text-align: center;
   color: #172026;
@@ -72,6 +72,10 @@ h3 {
 }
 .cart__productlayout ul li a:hover {
   text-decoration: none;
+}
+
+.input-group {
+  padding-top: 1rem;
 }
 
 .cart__btn {

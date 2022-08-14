@@ -6,8 +6,8 @@
   display: none;
 }
 
-.newone {
-  width: 75% !important;
+.carousel-indicators {
+  display: none;
 }
 
 .header-one {
@@ -25,11 +25,9 @@
 }
 
 .text h1 {
-  font-family: Source Serif Pro, Semibold;
-  width: 442px;
   color: #172026;
   opacity: 1;
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 600;
 }
 
@@ -40,7 +38,7 @@
 
 .buttonone {
   color: white;
-  font-size: 10px;
+  font-size: 14px;
   width: 130px;
   height: 24px;
   background: #1363DF 0% 0% no-repeat padding-box;
@@ -49,34 +47,31 @@
   border: none;
 }
 
-.one-card {
-  margin-left: -51px;
-  margin-right: 84px;
-  margin-bottom: 26px;
+.two-card {
+  height: 34rem;
+  background-color: #1B252C;
 }
 
-.two-card {
-  height: 24rem;
-  background-color: #1B252C;
+.one-card {
+  margin-top: -27px;
 }
 
 .three-card {
   color: white;
   text-align: center;
-  padding-top: 4rem;
+  padding-top: 10rem;
   font-size: 25px;
   font-family: "Source Serif Pro", serif;
 }
 
-.take-off {
-  padding-left: 115px;
-  padding-top: 35px;
+.take {
+  padding-left: 90px;
 }
 
 .take-off h1 {
   color: #172026;
   opacity: 1;
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 600;
   font-family: "Source Serif Pro", serif;
 }
@@ -84,6 +79,8 @@
 .take-off h6 {
   font: normal normal 600 13px/25px;
   color: #172026;
+  font-weight: 600;
+  font-size: 13px;
 }
 
 .take-off p {
@@ -93,17 +90,11 @@
 }
 
 .take-off-one img {
-  height: 250px;
-  width: 317px;
-  margin-left: -87px;
+  width: 100%;
 }
 
 .card-img img {
-  width: 80%;
-  margin-bottom: 30px;
-  height: 220px;
-  margin-left: 78px;
-  margin-top: 30px;
+  width: 100%;
 }
 
 .map1 {
@@ -136,7 +127,7 @@
 
 .btn-two {
   color: white;
-  font-size: 10px;
+  font-size: 14px;
   width: 130px;
   height: 24px;
   background: #1363DF 0% 0% no-repeat padding-box;
@@ -218,6 +209,11 @@
   background-image: url("https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg");
   height: 200px;
   position: relative;
+}
+
+.wq a {
+  text-decoration: none;
+  color: white;
 }
 
 .wq {
@@ -543,5 +539,19 @@
     width: 13%;
     margin: -88px 48px;
     opacity: 3;
+  }
+}
+.takeoffs img {
+  width: 100%;
+}
+
+.lastone {
+  padding-bottom: 45px;
+}
+
+@media screen and (max-width: 1024px) {
+  .text p {
+    font: normal normal normal 12px Muli;
+    color: #172026;
   }
 }/*# sourceMappingURL=home.css.map */

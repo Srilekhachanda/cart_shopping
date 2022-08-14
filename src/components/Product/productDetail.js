@@ -48,7 +48,7 @@ const ProductDetails = (props) => {
         <div className="productdetails">
           <div className="container">
             <div className="productdetails__right-breadcrumb mobile">
-              <BreadCrumb />
+              <BreadCrumb  category={"category"}/>
             </div>
 
             <div className="aem-Grid aem-Grid--12 details ">
@@ -69,7 +69,7 @@ const ProductDetails = (props) => {
               <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
                 <div className="productdetails__right">
                   <div className="productdetails__right-breadcrumb">
-                    <BreadCrumb />
+                  <BreadCrumb  category={"category"}/>
                   </div>
 
                   <h1 className="product-title">{title}</h1>
@@ -79,8 +79,8 @@ const ProductDetails = (props) => {
                   <h5 className="rating"> <i className='fa fa-star'></i> <i className='fa fa-star'></i> <i className='fa fa-star'></i> <i className='fa fa-star'></i> <i className='fa fa-star'></i> <span>({rating.count})</span>
                   </h5>
 
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore et dolore magna. Read more</p>
-                  <br />
+                  <p className="productdetails_test">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore et dolore magna. <u>Read more</u></p>
+               
                   <hr />
 
 
@@ -103,19 +103,12 @@ const ProductDetails = (props) => {
                       onClick={() => onAdd(product)}
                     />
                   </div>
-                  <br />
+                 
 
 
                   <button className="addtocart"
                     onClick={() => onAdd(product)}
-                  >Add to Cart</button>
-
-
-
-
-
-
-
+                  >ADD TO CART</button>
                   <div className="share-icons">
                     <ul>
                       <li><a href="#"><img src={heart} /> Save</a></li>

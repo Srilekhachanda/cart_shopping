@@ -17,7 +17,6 @@
   font: normal normal normal 16px/24px Muli;
   letter-spacing: 0px;
   color: #172026;
-  padding: 0 0 0 55px;
 }
 
 .order-method {
@@ -44,7 +43,10 @@
   display: flex;
 }
 .imageOne img {
-  width: 100px;
+  height: 100px;
+}
+.imageOne div {
+  padding-left: 15px;
 }
 
 .imageTwo {
@@ -73,6 +75,17 @@
   font: normal normal 600 16px/20px Muli;
 }
 
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .checkOutCart h1::before {
+    content: "";
+    background-color: #1363DF;
+    width: 120px;
+    position: absolute;
+    height: 8px;
+    bottom: -10%;
+    left: 33%;
+  }
+}
 @media only screen and (min-width: 1024px) and (max-width: 1400px) {
   .orderNumberTitle {
     font: normal normal 600 20px/30px Source Serif Pro;
@@ -80,16 +93,7 @@
   }
   .orderSuccessfull-rightColumn {
     position: absolute;
-    right: 90px;
-  }
-  .checkOutCart h1::before {
-    content: "";
-    background-color: #1363DF;
-    width: 70px;
-    position: absolute;
-    height: 8px;
-    bottom: -25%;
-    left: 45%;
+    right: 125px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -100,18 +104,7 @@
 }
 @media only screen and (min-width: 1400px) and (max-width: 1800px) {
   .orderSuccessfull-rightColumn {
-    right: 143px;
+    right: 0px;
     position: relative;
-  }
-}
-@media only screen and (min-width: 320px) and (max-width: 767px) {
-  .checkOutCart h1::before {
-    content: "";
-    background-color: #1363DF;
-    width: 70px;
-    position: absolute;
-    height: 8px;
-    bottom: -14%;
-    left: 42%;
   }
 }/*# sourceMappingURL=checkoutfive.css.map */

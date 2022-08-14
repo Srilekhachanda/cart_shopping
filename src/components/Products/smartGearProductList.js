@@ -7,7 +7,7 @@ import SmartGearProductPage from "../ProductInformation/smartGearPage";
 
 import Filter from '../Filter/Filter';
 
-import smartGear from "../../assets/images/women.png";
+import smartGear from "../../assets/images/smart.png";
 import BreadCrumb from '../BreadCrumb/breadCrumb';
 import '../../assets/scss/productList.css';
 // import Pagination from "../Pagination/pagination";
@@ -64,7 +64,7 @@ const SmartGearProductList = () => {
         <div className="breadcrumbslist">
           <div className="aem-Grid aem-Grid--12">
             <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12">
-              <BreadCrumb />
+            <BreadCrumb  category={"Jewellery"}/>
             </div>
             <div className="aem-GridColumn aem-GridColumn--default--9 aem-GridColumn--phone--12">
               <div className="product-filter">

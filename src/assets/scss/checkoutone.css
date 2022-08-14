@@ -11,7 +11,6 @@
 
 label {
   padding-left: 0px !important;
-  font-size: 12px;
 }
 
 .btn-shipping {
@@ -55,13 +54,12 @@ label {
 .contact {
   font-weight: 14px;
   text-align: left;
-  font: normal normal 600 17px/25px Muli;
+  font: normal normal 600 20px/25px Muli;
   width: 188px;
   height: 25px;
 }
 
 .details {
-  margin-top: 15px;
   height: 20px;
   text-align: left;
   font: normal normal normal 18px/15px Muli;
@@ -95,6 +93,7 @@ label {
   border: 2px solid #1363DF;
   font: normal normal Muli;
   background-color: #ffffff;
+  border-radius: 10px;
 }
 
 .button-btn {
@@ -110,7 +109,7 @@ label {
   position: relative;
   bottom: 35px;
   font-weight: smaller;
-  margin: 0px;
+  margin: 15px;
 }
 
 .pricingSummary {
@@ -128,14 +127,21 @@ label {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
-  .button-btn, .text-left {
+  .button-btn,
+.text-left {
     display: none;
+  }
+  .button-btnone {
+    margin: 0px;
+  }
+  .details {
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .checkOutCart {
-    margin-top: 70px;
-    margin-bottom: 25px;
+    margin-top: 0px;
   }
   .btn-shipping {
     margin-left: -90px;
@@ -161,9 +167,5 @@ label {
   }
   .text-Right {
     margin-top: 20px;
-  }
-  .details {
-    margin-top: 0px;
-    font-size: 15px;
   }
 }/*# sourceMappingURL=checkoutone.css.map */

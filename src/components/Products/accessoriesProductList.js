@@ -3,7 +3,7 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { setProducts } from "../../redux/actions/productsActions";
 import AccessoriesProductPage from "../ProductInformation/accessoriesPage";
-import accessories from "../../assets/images/shopping_three.png";
+import accessories from "../../assets/images/electronic.png";
 import BreadCrumb from '../BreadCrumb/breadCrumb';
 import '../../assets/scss/productList.css';
 import { BiSort } from "react-icons/bi";
@@ -11,6 +11,8 @@ import { FaArrowsAlt } from 'react-icons/fa';
 import Filter from '../Filter/Filter';
 import { FiSliders } from "react-icons/fi";
 import { RiArrowUpDownLine } from "react-icons/ri";
+
+
 
 
 const AccessoriesProductList = () => {
@@ -62,7 +64,7 @@ const AccessoriesProductList = () => {
         <div className="breadcrumbslist">
           <div className="aem-Grid aem-Grid--12">
             <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12">
-              <BreadCrumb />
+              <BreadCrumb  category={"Electronics"}/>
             </div>
             <div className="aem-GridColumn aem-GridColumn--default--9 aem-GridColumn--phone--12">
               <div className="product-filter">
