@@ -9,7 +9,7 @@ import boyone from '../../assets/images/boyone.png';
 import { NavLink } from "react-router-dom";
 import newtwo from '../../assets/images/newtwoa.png';
 import newone from '../../assets/images/newonea.png';
-// import { Link } from '@material-ui/core';
+
 import { Link } from "react-router-dom";
 
 
@@ -138,7 +138,12 @@ function Home() {
        
          <div className='container'>
           <div className="aem-Grid aem-Grid--12 takeoffone">
-         <div className="aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--phone--6">
+          <div className="aem-GridColumn  aem-GridColumn--phone--12">
+            <div className='takeoffstab'>
+            <img  src={newone}/>
+            </div>
+         </div>
+         <div className="aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--phone--12">
                            <div className='take'>
                            <div className='take-off'>
                                 <h1>Take off in the new <br />Signature Legging</h1>
@@ -157,17 +162,13 @@ function Home() {
                            </div>
 
                         </div>
-                        <div className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--6">
+            <div className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--6">
             <div className='takeoffs'>
             <img  src={newone}/>
             </div>
          </div>
          </div>
          </div>
-        
-
-
-
                 <div className='container'>
                 <div className='lastone'>
                     <div className="aem-Grid aem-Grid--12 boy-img-one">

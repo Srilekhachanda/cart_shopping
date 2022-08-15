@@ -6,6 +6,10 @@
   display: none;
 }
 
+.takeoffstab {
+  display: none;
+}
+
 .carousel-indicators {
   display: none;
 }
@@ -279,10 +283,30 @@
     color: #FFFFFF;
     font: normal normal normal 11px/23px Muli;
   }
+  .takeoffstab {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .takeoffstab {
+    display: block;
+  }
+  .takeoffstab img {
+    width: 100%;
+  }
+  .takeoffs {
+    display: none;
+  }
+  .take {
+    text-align: center;
+  }
 }
 @media screen and (min-width: 1440px) {
   .card-img img {
     width: 86%;
+  }
+  .takeoffstab {
+    display: none;
   }
   .map2 hr {
     margin: -23px -39px;
@@ -473,22 +497,11 @@
   }
 }
 @media screen and (max-width: 768px) {
-  .take-off {
-    padding-left: 24px;
-    padding-top: 35px;
-  }
-  .card-img img {
-    width: 86%;
-    margin-bottom: 30px;
-    height: 220px;
-    margin-left: 52px;
-    margin-top: 30px;
-  }
   .btn-three {
     padding-left: 26px;
   }
   .btn-four {
-    margin-left: 154px;
+    margin-left: 256px;
   }
   .text h1 {
     font-size: 30px;
@@ -508,9 +521,6 @@
     width: 298px;
     margin-left: 3px;
   }
-  .take-off h1 {
-    font-size: 26px;
-  }
   .lines-one {
     display: none;
   }
@@ -518,17 +528,13 @@
     display: none;
   }
   .one-card {
-    margin-left: 126px;
-    margin-right: 110px;
-    margin-top: -80px;
+    margin-left: 34px;
+    margin-right: 29px;
+    margin-top: -76px;
   }
   .map1 {
-    padding-right: 310px;
-    font-size: 35px;
-    color: #f3f3f3;
-    position: relative;
-    bottom: 189px;
-    margin-left: 5.7rem;
+    bottom: 251px;
+    margin-left: 5.8rem;
   }
   .map2 {
     margin-top: -185px;
@@ -539,6 +545,8 @@
     width: 13%;
     margin: -88px 48px;
     opacity: 3;
+    position: relative;
+    top: -63px;
   }
 }
 .takeoffs img {

@@ -6,8 +6,6 @@ import WomenProductPage from "../ProductInformation/womensPage";
 import women from "../../assets/images/womenone.png";
 import BreadCrumb from '../BreadCrumb/breadCrumb';
 import '../../assets/scss/productList.css';
-import { BiSort } from "react-icons/bi";
-import { FaArrowsAlt } from 'react-icons/fa';
 import Filter from '../Filter/Filter';
 import { FiSliders } from "react-icons/fi";
 import { RiArrowUpDownLine } from "react-icons/ri";

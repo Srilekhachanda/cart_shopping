@@ -27,11 +27,8 @@ function LoginForm({ Login, error }) {
                     <div className='form-group'>
                         <a href='/'>Forgot Password?</a>
                     </div>
-                    {/* <input type="submit" value="SIGN IN" /> */}
-
                     <button className="button-primary">SIGN IN</button>
                     <hr />
-                    {/* <button className="account">CREATE ACCOUNT</button> */}
                     <NavLink to="/registerForm" className="btn btn-outline-dark ms-2">
                         CREATE ACCOUNT
                     </NavLink>

@@ -3,14 +3,10 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { setProducts } from "../../redux/actions/productsActions";
 import SmartGearProductPage from "../ProductInformation/smartGearPage";
-
-
 import Filter from '../Filter/Filter';
-
 import smartGear from "../../assets/images/smart.png";
 import BreadCrumb from '../BreadCrumb/breadCrumb';
 import '../../assets/scss/productList.css';
-// import Pagination from "../Pagination/pagination";
 import { FiSliders } from "react-icons/fi";
 import { RiArrowUpDownLine } from "react-icons/ri";
 

@@ -250,41 +250,14 @@ function Checkoutone(props) {
 
               </div>
               <br />
-              {/* <div class="aem-Grid aem-Grid--12">
-              <div class="aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--phone--12 ">
-                <div className='continue_shipping'>
-                  <button type="submit" class="btn-shipping">
-                    CONTINUE TO SHIPPING METHOD
-                  </button>
-                </div>
-
-                <div className='continue_shipping'>
-                  <Link to="/shippingMethod" >
-                    <button type="submit" class="btn-shipping">
-                      CONTINUE TO SHIPPING METHOD
-                    </button>
-                  </Link>
-                </div>
-              </div>
-            </div> */}
-
-
-
-
               <div class="aem-Grid aem-Grid--12">
                 <div class="aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--phone--12 ">
-                  {/* <div>
-                    <button type="submit" class="btn-shipping">
-                      CONTINUE TO SHIPPING METHOD
-                    </button>
-                  </div> */}
-
                   <div className='continue_shipping'>
-                    {/* <Link to="/shippingMethod" > */}
+                  
                     <button type="submit" class="btn-shipping">
                       CONTINUE TO SHIPPING METHOD
                     </button>
-                    {/* </Link> */}
+                
                   </div>
                 </div>
               </div>
@@ -294,22 +267,7 @@ function Checkoutone(props) {
               <p> 3. Payment Information</p>
               <hr />
             </form>
-
-
-            {/* <div className='checkout_Steps'>
-            <hr />
-            <h4> 2. Shipping Method </h4>
-            {
-              !isShipping ? <h4> 2. Shipping Method </h4> : <ShippingMethod isShippingDetails={isShipping} />
-            }
-            <hr />
-            <h4>3. Payment Information</h4>
-            <hr />
-          </div> */}
           </div>
-
-
-
           <div class="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
             <div class="aem-Grid aem-Grid--12 button-btn">
               <div class="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 text-left">

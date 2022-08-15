@@ -6,7 +6,6 @@ import MenProductPage from "../ProductInformation/mensPage";
 import men from "../../assets/images/menhero.png";
 import BreadCrumb from '../BreadCrumb/breadCrumb';
 import '../../assets/scss/productList.css';
-
 import Filter from '../Filter/Filter';
 import { FiSliders } from "react-icons/fi";
 import { RiArrowUpDownLine } from "react-icons/ri";

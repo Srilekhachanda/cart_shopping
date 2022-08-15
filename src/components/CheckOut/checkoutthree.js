@@ -90,7 +90,7 @@ function Checkoutthree(props) {
                                 <div class="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 payment_info">
                                     <p className='payment_Info'>3. Payment Information</p>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+                                        <input class="standard" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
                                             {...register("paymentMethod", {
                                                 required: "Please select payment method",
                                             })}
@@ -99,7 +99,7 @@ function Checkoutthree(props) {
                                             }}
                                             value="Credit Card"
                                         />
-                                        <label class="form-check-label" for="flexRadioDefault1" className='label_text'>
+                                        <label class="standard" for="flexRadioDefault1" className='label_text'>
                                             Credit Card
                                         </label>
                                         {errors.paymentMethod && (
@@ -156,10 +156,10 @@ function Checkoutthree(props) {
                                     <div class="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12 payment_info">
 
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="Paypal" onClick={() => {
+                                            <input class="standard" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="Paypal" onClick={() => {
                                                 trigger("paymentMethod");
                                             }} />
-                                            <label class="form-check-label" for="flexRadioDefault1" className='label_text'>
+                                            <label class="standard" for="flexRadioDefault1" className='label_text'>
                                                 PayPal
                                             </label>
                                         </div>

@@ -9,7 +9,6 @@ import Footer from "./components/Footer/footer";
 import Basket from "./components/Cart/basket";
 import Home from "./components/Home/home";
 import LoginApp from "./components/SignIn/LoginApp"
-import ProductPage from "./components/ProductInformation/productPage"
 import WomenProductList from "./components/Products/womenslist";
 import MenProductList from "./components/Products/menProductsList";
 import SmartGearProductList from "./components/Products/smartGearProductList";

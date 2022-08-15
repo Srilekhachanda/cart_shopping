@@ -8,10 +8,7 @@ import {
 } from "../../redux/actions/productsActions";
 import BreadCrumb from "../BreadCrumb/breadCrumb";
 import '../../assets/scss/productDetail.css';
-
 import heart from '../../assets/images/heart.png';
-
-
 
 const ProductDetails = (props) => {
 

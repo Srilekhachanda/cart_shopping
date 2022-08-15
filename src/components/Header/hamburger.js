@@ -34,8 +34,8 @@ function Hamburger(props) {
             <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="/women">Women</NavLink></li>
             <li><NavLink to="/men" >Men</NavLink></li>
-            <li><NavLink to="/smartGear" >Smart Gear</NavLink></li>
-            <li><NavLink to="/accessories" >Accessories</NavLink></li>
+            <li><NavLink to="/electronics" >Smart Gear</NavLink></li>
+            <li><NavLink to="/jewellery" >Accessories</NavLink></li>
           </div>
         </div>
       </div>

@@ -222,6 +222,12 @@ $border-color_1: transparent;
 	}
 }
 @media only screen and (min-width: 320px) and (max-width: 767px) {
+	.productCatalog__image img {
+		width: 100%;
+		/* position: relative; */
+		height: 275px;
+		 top: 0px !important;
+	}
 	.container {
 		width: 100% !important;
 	}
@@ -260,11 +266,11 @@ $border-color_1: transparent;
 		}
 	}
 	.productCatalog__title {
-		width: 90%;
+		width: 94%;
 		margin: auto;
-		padding: 50px 0 !important;
+		padding: 46px 0 !important;
 		height: auto !important;
-		margin-top: -20%;
+		margin-top: -6%;
 		h3 {
 			font-size: 36px !important;
 			&::before {

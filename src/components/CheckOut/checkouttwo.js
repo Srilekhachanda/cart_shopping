@@ -65,19 +65,19 @@ function Checkouttwo(props) {
                 <div className='shipping_method_radio'>
                   <h3>2. Shipping Method</h3>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" value=" Standard Shipping (4-8 business days via USPS) FREE" name="flexRadioDefault" id="flexRadioDefault1" onChange={handleShippingMethod} />
+                    <input class="standard" type="radio" value=" Standard Shipping (4-8 business days via USPS) FREE" name="flexRadioDefault" id="flexRadioDefault1" onChange={handleShippingMethod} />
                     <label class="form-check-label" for="flexRadioDefault1" className='label_text'>
                       Standard Shipping (4-8 business days via USPS) FREE
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" value="Express Delivery (2-5 business days via USPS) $17.95" name="flexRadioDefault" id="flexRadioDefault2" onChange={handleShippingMethod} />
+                    <input class="standard" type="radio" value="Express Delivery (2-5 business days via USPS) $17.95" name="flexRadioDefault" id="flexRadioDefault2" onChange={handleShippingMethod} />
                     <label class="form-check-label" for="flexRadioDefault2" className='label_text'>
                       Express Delivery (2-5 business days via USPS) $17.95
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" value="Next Day Delivery (Next business days via FedEx) $53.61" name="flexRadioDefault" id="flexRadioDefault3" onChange={handleShippingMethod} />
+                    <input class="standard" type="radio" value="Next Day Delivery (Next business days via FedEx) $53.61" name="flexRadioDefault" id="flexRadioDefault3" onChange={handleShippingMethod} />
                     <label class="form-check-label" for="flexRadioDefault1" className='label_text'>
                       Next Day Delivery (Next business days via FedEx) $53.61
                     </label>
