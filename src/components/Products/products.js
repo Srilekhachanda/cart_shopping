@@ -28,29 +28,40 @@ const ProductList = () => {
   return (
     <div className="productCatalog">
       <div className="productCatalog-mobile">
-        <div className="aem-Grid aem-Grid--12">
-          <div className="aem-GridColumn aem-GridColumn--phone--12">
+        <div class="aem-Grid aem-Grid--12">
+          <div class="aem-GridColumn aem-GridColumn--phone--12">
             <div className="productCatalog__image">
               <img src={women} alt="women" />
             </div>
           </div>
-          <div className="aem-GridColumn aem-GridColumn--phone--12">
+          <div class="aem-GridColumn aem-GridColumn--phone--12">
             <div className="productCatalog__title">
-              <h3>All Produts</h3>
+              <h3>All Product's</h3>
             </div>
           </div>
         </div>
+
+        <section className="productfilter">
+          <div class="aem-Grid aem-Grid--12">
+            <div class="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12">
+              <Filter />
+            </div>
+            <div class="aem-GridColumn aem-GridColumn--default--9 aem-GridColumn--phone--12 ">
+              <ProductPage />
+            </div>
+          </div>
+        </section>
       </div>
 
 
       <div className="productCatalog-desktop">
-        <div className="aem-Grid aem-Grid--12">
-          <div className="aem-GridColumn aem-GridColumn--default--4">
+        <div class="aem-Grid aem-Grid--12">
+          <div class="aem-GridColumn aem-GridColumn--default--4">
             <div className="productCatalog__title">
-              <h3>All Produts</h3>
+              <h3>All Product's</h3>
             </div>
           </div>
-          <div className="aem-GridColumn aem-GridColumn--default--8">
+          <div class="aem-GridColumn aem-GridColumn--default--8">
             <div className="productCatalog__image">
               <img src={women} alt="women" />
             </div>
@@ -59,11 +70,11 @@ const ProductList = () => {
 
         <div className="container">
           <div className="breadcrumbslist">
-            <div className="aem-Grid aem-Grid--12">
-              <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12">
-                <BreadCrumb category={"category"} />
+            <div class="aem-Grid aem-Grid--12">
+              <div class="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12">
+                <BreadCrumb />
               </div>
-              <div className="aem-GridColumn aem-GridColumn--default--9 aem-GridColumn--phone--12">
+              <div class="aem-GridColumn aem-GridColumn--default--9 aem-GridColumn--phone--12">
                 <div className="product-filter">
                   <button><FiSliders />Filter Results</button><button><RiArrowUpDownLine /> Sort Products</button>
                 </div>
@@ -80,11 +91,11 @@ const ProductList = () => {
           </div>
 
           <section className="productfilter">
-            <div className="aem-Grid aem-Grid--12">
-              <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12">
+            <div class="aem-Grid aem-Grid--12">
+              <div class="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12">
                 <Filter />
               </div>
-              <div className="aem-GridColumn aem-GridColumn--default--9 aem-GridColumn--phone--12 ">
+              <div class="aem-GridColumn aem-GridColumn--default--9 aem-GridColumn--phone--12 ">
                 <ProductPage />
               </div>
             </div>

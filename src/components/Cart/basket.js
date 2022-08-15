@@ -8,14 +8,20 @@ import heart from '../../assets/images/heart.png';
 import Accordions from '../Accordion/accordion';
 
 export default function Basket(props) {
-
+debugger
   const { cartItems, onAdd, onRemove } = props;
   const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
   const taxPrice = itemsPrice * 0.14;
   const shippingPrice = itemsPrice > 2000 ? 0 : 20;
   const totalPrice = itemsPrice + taxPrice + shippingPrice;
   const [qty, setQty] = useState(1);
-
+  
+  // var totalItemsQty=props;
+  // cartItems.forEach((ele)=>{
+  //   debugger;
+  //   totalItemsQty=totalItemsQty+ele.qty;
+  //   });
+  
   function onChange(e) {
     const v = e.target.value;
     if (v <= 0) setQty(0);
