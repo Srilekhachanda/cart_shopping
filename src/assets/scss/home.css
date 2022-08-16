@@ -51,11 +51,6 @@
   border: none;
 }
 
-.two-card {
-  height: 34rem;
-  background-color: #1B252C;
-}
-
 .one-card {
   margin-top: -27px;
 }
@@ -69,7 +64,8 @@
 }
 
 .take {
-  padding-left: 90px;
+  padding-left: 73px;
+  padding-top: 72px;
 }
 
 .take-off h1 {
@@ -185,33 +181,29 @@
 
 .card--box {
   background-size: cover;
-  width: 100%;
+  width: 98%;
   padding-top: 8rem;
-  padding-left: 5px;
-  padding-right: 5px;
+  /* padding-left: 5px; */
+  /* padding-right: 5px; */
 }
 
 .women {
   background-image: url("https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg");
-  height: 200px;
   position: relative;
 }
 
 .men {
   background-image: url("https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg");
-  height: 200px;
   position: relative;
 }
 
 .smart {
   background-image: url("https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg");
-  height: 200px;
   position: relative;
 }
 
 .assess {
   background-image: url("https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg");
-  height: 200px;
   position: relative;
 }
 
@@ -221,14 +213,15 @@
 }
 
 .wq {
+  margin-top: 55px;
   background-color: rgba(27, 37, 44, 0.8509803922);
   color: #FFFFFF;
   border-bottom: 6px solid #1363DF;
-  position: absolute;
-  bottom: 0px;
+  /* position: absolute; */
+  /* bottom: 0px; */
   width: 100%;
   font: normal normal 600 24px/30px Source Serif Pro;
-  padding: 0px 26px;
+  padding: 10px 35px;
 }
 
 .wq h6 {
@@ -303,7 +296,7 @@
 }
 @media screen and (min-width: 1440px) {
   .card-img img {
-    width: 86%;
+    width: 100%;
   }
   .takeoffstab {
     display: none;
@@ -479,9 +472,10 @@
   }
   .card--box {
     background-size: cover;
-    width: 100%;
-    padding-left: 5px;
-    padding-right: 5px;
+    width: 98%;
+    /* padding-left: 5px; */
+    /* padding-right: 5px; */
+    height: 220px;
   }
   .one-card {
     padding: 15px;
@@ -561,5 +555,18 @@
   .text p {
     font: normal normal normal 12px Muli;
     color: #172026;
+  }
+  .two-card {
+    height: 35rem !important;
+    background-color: #1B252C;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .two-card {
+    height: 41rem;
+    background-color: #1B252C;
+  }
+  .btn-four {
+    margin-left: 111px;
   }
 }/*# sourceMappingURL=home.css.map */
