@@ -1,0 +1,17 @@
+.signin li {
+  list-style: none;
+}
+
+.signin ul {
+  display: flex;
+  gap: 20px;
+  padding-left: 0px;
+}
+
+.forgetpassword a {
+  color: black;
+}
+
+.signin {
+  padding-bottom: 20px;
+}/*# sourceMappingURL=Signin.css.map */

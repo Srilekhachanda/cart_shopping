@@ -8,12 +8,12 @@ import Header from '../src/components/Header/header';
 import Footer from "./components/Footer/footer";
 import Basket from "./components/Cart/basket";
 import Home from "./components/Home/home";
-import LoginApp from "./components/SignIn/LoginApp"
+
 import WomenProductList from "./components/Products/womenslist";
 import MenProductList from "./components/Products/menProductsList";
 import SmartGearProductList from "./components/Products/smartGearProductList";
 import AccessoriesProductList from "./components/Products/accessoriesProductList";
-import RegisterForm from "./components/Register/register";
+
 import Hamburger from "./components/Header/hamburger";
 import CheckOut from "./components/CheckOut/checkOut";
 import Checkoutone from "./components/CheckOut/checkoutone";
@@ -24,6 +24,9 @@ import Checkoutfive from "./components/CheckOut/checkoutfive";
 import Filter from "./components/Filter/Filter";
 import axios from "axios";
 import ProductList from "./components/Products/products";
+import Signin from "./components/Login/Signin";
+import Create from "./components/Login/Create";
+import Signout from "./components/Login/Signout";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -74,14 +77,16 @@ function App() {
         <Hamburger countCartItems={cartItems.length} />
         <Routes>
           <Route exact path='/' element={<Home />} />
-          <Route exact path='/login' element={<LoginApp />} />
-          <Route exact path="/registerForm" element={<RegisterForm />} />
+         
           <Route exact path='/filter' element={<Filter />} />
           <Route exact path='/women' element={<WomenProductList />} />
           <Route exact path='/men' element={<MenProductList />} />
           <Route exact path='/jewellery' element={<SmartGearProductList />} />
           <Route exact path='/electronics' element={<AccessoriesProductList />} />
           <Route exact path='/products' element={<ProductList />} />
+          <Route exact path='/Signin' element={<Signin />} />
+          <Route exact path='/Create' element={<Create />} />
+          <Route exact path='/Signout' element={<Signout />} />
 
           <Route exact path='/checkout' element={<CheckOut />} />
           <Route exact path='/checkoutone' element={<Checkoutone cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}/>} />
@@ -95,6 +100,7 @@ function App() {
           <Route>404 Not Found!</Route>
         </Routes>
         <Footer />
+       
       </Router>
     </div>
   );

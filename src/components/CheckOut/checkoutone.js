@@ -275,7 +275,7 @@ function Checkoutone(props) {
               </div>
 
               <div class="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 text__right">
-                <Link to="/login"> <button type="button" className='btn-signin'>
+                <Link to="/Signin"> <button type="button" className='btn-signin'>
                   SIGN IN</button></Link>
 
               </div>
