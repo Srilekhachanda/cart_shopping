@@ -42,7 +42,7 @@ function Checkouttwo(props) {
           <div class="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12">
             <div class="aem-Grid aem-Grid--12 shipping-Info">
               <div className='editOption'>
-                <p>Shipping Information</p>
+                <p>Shipping Information </p>
               </div>
               <div class="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
                 <p className='shipping_details'>{shippingAddress.email} <br />{shippingAddress.phoneNumber}</p>

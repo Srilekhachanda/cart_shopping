@@ -57,7 +57,7 @@ const ProductList = () => {
       <div className="productCatalog-desktop">
         <div class="aem-Grid aem-Grid--12">
           <div class="aem-GridColumn aem-GridColumn--default--4">
-            <div className="productCatalog__title">
+            <div className="productCatalog__accessories">
               <h3>All Product's</h3>
             </div>
           </div>

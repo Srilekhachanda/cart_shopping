@@ -45,7 +45,7 @@ const SmartGearProductList = () => {
       <div className="productCatalog-desktop">
         <div className="aem-Grid aem-Grid--12">
           <div className="aem-GridColumn aem-GridColumn--default--4">
-            <div className="productCatalog__title">
+            <div className="productCatalog__accessories">
               <h3>Smart Gear</h3>
             </div>
           </div>

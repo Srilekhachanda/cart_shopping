@@ -45,7 +45,7 @@ const AccessoriesProductList = () => {
       <div className="productCatalog-desktop">
         <div className="aem-Grid aem-Grid--12">
           <div className="aem-GridColumn aem-GridColumn--default--4">
-            <div className="productCatalog__title">
+            <div className="productCatalog__accessories">
               <h3>Accessories</h3>
             </div>
           </div>
@@ -64,7 +64,7 @@ const AccessoriesProductList = () => {
             </div>
             <div className="aem-GridColumn aem-GridColumn--default--9 aem-GridColumn--phone--12">
               <div className="product-filter">
-                <button><FiSliders />Filter Results</button><button><RiArrowUpDownLine />Sort Ptoducts</button>
+                <button><FiSliders />Filter Results</button><button><RiArrowUpDownLine />Sort Products</button>
               </div>
               <div className="breadcrumbslist__filter">
                 <p>{categoryList.length} Results</p>

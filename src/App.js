@@ -90,7 +90,7 @@ function App() {
           <Route exact path='/checkoutfour' element={<Checkoutfour cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}/>} />
           <Route exact path='/checkoutfive' element={<Checkoutfive cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}/>} />
 
-          <Route exact path='/product/:productId' element={<ProductDetails onAdd={onAdd} cartItems={cartItems} />} />
+          <Route exact path='/product/:productId' element={<ProductDetails onAdd={onAdd}onRemove={onRemove}   cartItems={cartItems} />} />
           <Route exact path='/cart' element={<Basket cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} />} />
           <Route>404 Not Found!</Route>
         </Routes>

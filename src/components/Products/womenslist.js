@@ -46,7 +46,7 @@ const WomenProductList = () => {
         <div className="aem-Grid aem-Grid--12">
           <div className="aem-GridColumn aem-GridColumn--default--4">
             <div className="productCatalog__title">
-              <h3>Women's</h3>
+            <h3>Women’s <br/>Outerwear</h3>
             </div>
           </div>
           <div className="aem-GridColumn aem-GridColumn--default--8">
@@ -60,7 +60,7 @@ const WomenProductList = () => {
         <div className="breadcrumbslist">
           <div className="aem-Grid aem-Grid--12">
             <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12">
-            <BreadCrumb  category={"women's"}/>
+            <BreadCrumb  category={"Women's"}/>
             </div>
             <div className="aem-GridColumn aem-GridColumn--default--9 aem-GridColumn--phone--12">
               <div className="product-filter">

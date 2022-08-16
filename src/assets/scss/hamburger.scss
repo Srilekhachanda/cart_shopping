@@ -24,11 +24,12 @@ $background-color_1: #fff;
 		padding-left: 50px;
 		transition: transform 0.5s ease-in-out;
 		text-align: center;
-		li {
-			margin-bottom: 1.2rem;
-			font-size: 1.5rem;
-			font-weight: 500;
-		}
+	// 	li {
+	// 		// margin-bottom: 1.2rem;
+	// 		// font-size: 1.5rem;
+	// 		// font-weight: 500;
+	// 	}
+	// }
 	}
 	.nav-container {
 		li {
@@ -104,19 +105,22 @@ $background-color_1: #fff;
 			z-index: 1;
 			margin: 0;
 			left: 0;
-			background-color: #0b0bda;
+			background-color: #e5e5e7;
 			height: 533px;
 
 		}
 		&:checked~.hamburger-lines {
 			.line1 {
 				transform: rotate(45deg);
+				background-color: black;
 			}
 			.line2 {
 				transform: scaleY(0);
+				background-color: black;
 			}
 			.line3 {
 				transform: rotate(-45deg);
+				background-color: black;
 			}
 		}
 		&:checked~.logo {
@@ -179,11 +183,16 @@ svg{
 		right: 178px;
 	}
 	.hamberger__logo {
-		left: 38%;
-		position: absolute;
-		top: 10px;
-		margin-top: 5px;
-		margin-left: 25px;
+		// left: 38%;
+		// position: absolute;
+		// top: 10px;
+		// margin-top: 5px;
+		// margin-left: 25px;
+			left: 38%;
+			position: absolute;
+			top: 10px;
+		
+			justify-content: center;
 	}
 	.hamburgerPhone {
 		display: flex;
@@ -198,7 +207,7 @@ svg{
 	.header__icons {
 		position: absolute;
 		top: 15px;
-		right: 5px;
+		right: 27px;
 	}
 	.navbar {
 		.menu-items {

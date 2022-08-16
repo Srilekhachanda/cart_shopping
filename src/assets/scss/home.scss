@@ -113,8 +113,8 @@
   
   .btn-one {
     color: #1363DF;
-    width: 130px;
-    height: 24px;
+    width: 151px;
+      height: 38px;
     border: 1px solid #2A65D7;
     border-radius: 10px;
     font: normal normal Muli;
@@ -122,16 +122,18 @@
     font: normal normal bold 10px/16px Muli;
   }
   
-  .btn-two {
-    color: white;
-    font-size: 14px;
-    width: 130px;
-    height: 24px;
-    background: #1363DF 0% 0% no-repeat padding-box;
-    border-radius: 10px;
-    opacity: 1;
-    border: none;
+
+    .btn-two {
+      color: white;
+      font-size: 14px;
+      width: 151px;
+      height: 38px;
+      background: #1363DF 0% 0% no-repeat padding-box;
+      border-radius: 10px;
+      opacity: 1;
+      border: none;
   }
+  
   
   .btn-three {
     padding-left: 112px;
@@ -479,7 +481,7 @@
   
   }
   
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 767px) {
     .wq {
       background-color: rgba(27, 37, 44, 0.8509803922);
       color: #FFFFFF;
@@ -620,5 +622,60 @@
  
   margin-left: 111px;
 }
+}
+
+.carousel-control-prev {
+  left: -1.75%;
+}
+.carousel-indicators {
+  display: none !important;
+}
+.carousel-control-next {
+  right: -1.75%;
+}
+@media only screen and (max-width: 767px) {
+.carousel-indicators {
+    display: block !important;
+    text-align: center !important;
+  }
+a.carousel-control-prev {
+    display: none;
+  }
+  a.carousel-control-next {
+    display: none;
+  }
+}
+.carousel-control-next,
+.carousel-control-prev {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  width: 6%;
+}
+a.carousel-control-prev {
+  width: 9%;
+  left: -2%;
+}
+a.carousel-control-next {
+  width: 9%;
+  right: -2%;
+}
+span.carousel-control-prev-icon,
+span.carousel-control-next-icon {
+  width: 3rem;
+  height: 3rem;
+}
+.carousel-indicators {
+  display: none;
+  margin-bottom: 1rem !important;
+}
+.carousel-indicators button {
+  width: 6px !important;
+  height: 6px !important;
+  padding: 1px !important;
+  border-radius: 50% !important;
+  color: #878787;
+}
+.carousel-indicators button.active {
+  background-color: black !important;
 }
  

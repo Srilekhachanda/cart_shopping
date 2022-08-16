@@ -36,7 +36,7 @@ const MenProductList = () => {
           </div>
           <div className="aem-GridColumn aem-GridColumn--phone--12">
             <div className="productCatalog__title">
-              <h3>Mens <br />Outerwear</h3>
+              <h3>Men's <br />Outerwear</h3>
             </div>
           </div>
         </div>
@@ -46,7 +46,7 @@ const MenProductList = () => {
         <div className="aem-Grid aem-Grid--12">
           <div className="aem-GridColumn aem-GridColumn--default--4">
             <div className="productCatalog__title">
-              <h3>Men's</h3>
+            <h3>Men's <br />Outerwear</h3>
             </div>
           </div>
           <div className="aem-GridColumn aem-GridColumn--default--8">

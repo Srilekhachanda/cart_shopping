@@ -31,11 +31,32 @@ $border-color_1: transparent;
 .productCatalog-mobile {
 	display: none;
 }
-.productCatalog__title {
+.productCatalog__accessories{
 	background-color: $background-color_2;
 	// height: 340px;
 	position: relative;
 	padding: 122px 0;
+	h3 {
+		color: $color_1;
+		text-align: center;
+		margin: 0;
+		font-size: 48px;
+		&::before {
+			content: "";
+			background-color: $background-color_1;
+			width: 30%;
+			position: absolute;
+			height: 5px;
+			top: 70%;
+			left: 35%;
+		}
+	}
+}
+.productCatalog__title {
+	background-color: $background-color_2;
+	// height: 340px;
+	position: relative;
+	padding: 95px 0;
 	h3 {
 		color: $color_1;
 		text-align: center;
@@ -296,7 +317,7 @@ $border-color_1: transparent;
 		}
 	}
 }
-@media only screen and (min-width: 1024px) and (max-width: 1800px) {
+@media only screen and (min-width: 1024px) and (max-width: 3800px) {
 	.product-filter {
 		display: none;
 	}
