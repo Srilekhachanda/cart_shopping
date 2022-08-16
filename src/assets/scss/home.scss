@@ -495,11 +495,15 @@
     .location{
       margin-top: 34px !important;
     }
-    .locationone hr {
+  //   .locationone hr {
      
-      margin: -171px 18px;
-      opacity: 3;
-  }
+  //     margin: -171px 18px;
+  //     opacity: 3;
+  // }
+  .locationone hr {
+    margin: -227px 8px;
+    opacity: 3;
+}
     .collection-mobile {
       display: block;
     }
@@ -613,15 +617,15 @@
 }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 2560px) {
   .two-card {
     height: 41rem;
     background-color: #1B252C;
 }
-.btn-four {
+// .btn-four {
  
-  margin-left: 111px;
-}
+//   margin-left: 111px;
+// }
 }
 
 .carousel-control-prev {

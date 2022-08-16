@@ -457,7 +457,7 @@
     margin-top: 34px !important;
   }
   .locationone hr {
-    margin: -171px 18px;
+    margin: -227px 8px;
     opacity: 3;
   }
   .collection-mobile {
@@ -561,13 +561,10 @@
     background-color: #1B252C;
   }
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 2560px) {
   .two-card {
     height: 41rem;
     background-color: #1B252C;
-  }
-  .btn-four {
-    margin-left: 111px;
   }
 }
 .carousel-control-prev {
